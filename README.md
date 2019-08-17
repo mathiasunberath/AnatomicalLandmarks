@@ -1,6 +1,8 @@
 # AnatomicalLandmarks
 Implementation of our MICCAI and invited IJCARS paper on detecting anatomical landmarks of the pelvis in X-ray images from arbitrary views.
 
+![DeepDRR Pipeline](https://raw.githubusercontent.com/mathiasunberath/AnatomicalLandmarks/master/img/figure1.png)
+
 ## CT Data Annotation
 Our training data is synthetically generated from full body CTs from the NIH Cancer Imaging Archive. In total, 20 CTs (male and female patients) were cropped to an ROI around the pelvis and 23 anatomical landmark positions were annotated manually in 3D. Landmarks were selected to be clinically meaningful and clearly identifiable in 3D; see Fig. 1 a). We release our annotation files under the folder '/annotation'. The name of the .fcsv file is in consistent with the CT data. 
 ## Projection Geometry
@@ -14,7 +16,7 @@ We calibrated the CT volume in our C-arm geometry by adding an origin offset. Th
 ```
 landmark3D[0] = -(landmark3D[0] + dicom_offset[0]) + origin_offset[0]
 landmark3D[1] = -(landmark3D[1] + dicom_offset[1]) + origin_offset[1]
-landmark3D[2] =   landmark3D[2] - dicom_offset[2] + origin_offset[2] - 25
+landmark3D[2] =   landmark3D[2] - dicom_offset[2]  + origin_offset[2] - 25
 ```
 After this, we can then use the conventional pinhole camera projection model to project the 3D landmark onto 2D plane. We note the 3-by-4 projection matrix as `P`. The 3-by-1 projected result is saved at `proj`. The 2D landmark coordinate is saved at `landmark2D`.
 ```
@@ -22,13 +24,14 @@ proj = P * [landmark3D; 1] # Make it homogeneous coordinate
 landmark2D[0] = proj[0] / proj[2]
 landmark2D[1] = proj[1] / proj[2]
 ```
-We provide a matlab code `projection.m` with numeric examples to better undrestand the above process. The code takes the CT file: *ABD_LYMPH_057* as an example, where the dicom offset and origin are
+We provide a matlab code **projection.m** with numeric examples to better undrestand the above process. The code takes the CT file: *ABD_LYMPH_057* as an example, where the dicom offset and origin are
 ```
  DICOM offset Tag (0020, 0032): [-199.61, -380.83, -686.80]
  Instance number Tag (0020, 0013): 1
 ```
 We use the first annotated landmark position: `[30.45, 122.19, -630.07]`, and generate a random rotation and translation matrix saved as `R` and `T`. The 3-by-3 C-arm intrinsic calibration matrix is saved as `K`. 
 ## Evaluation
+
 ## Reference
 [1] Roth, H., Lu, L., Seff, A., Cherry, K.M., Hoffman, J., Wang, S., Summers, R.M.:
 A new 2.5 d representation for lymph node detection in ct. The Cancer Imaging
