@@ -1,5 +1,5 @@
 % This code is an example for understanding the projection geometry of anatomical landmarks. 
-% Copyright Cong Gao, the Johns Hopkins University, email: cgao11@jhu.edu
+% Copyright: Cong Gao, the Johns Hopkins University, email: cgao11@jhu.edu
 %% Offset setup 
 % The code takes the CT file: ABD_LYMPH_057 as an example
 % Dicom Offset
