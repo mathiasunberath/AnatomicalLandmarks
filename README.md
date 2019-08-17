@@ -14,7 +14,7 @@ The CT volume offset is recorded in the dicom meta data. The dicom slices need t
 We calibrated the CT volume in our C-arm geometry by adding an origin offset. The calibrated origin data is uploaded in the text file 'origin.txt'.  
 
 #### Projection Formula
-**Please use the following sudo code to manipulate the landmark offset.** The 3D annotation landmark point is noted as `landmark3D`. The aforementioned dicom offset is noted as `dicom_offset`; origin offset as `origin_offset`.
+The 3D annotation landmark point is noted as `landmark3D`. The aforementioned dicom offset is noted as `dicom_offset`; origin offset as `origin_offset`. **Please use the following sudo code to manipulate the landmark offset.** 
 ```
 landmark3D[0] = -(landmark3D[0] + dicom_offset[0]) + origin_offset[0]
 landmark3D[1] = -(landmark3D[1] + dicom_offset[1]) + origin_offset[1]
