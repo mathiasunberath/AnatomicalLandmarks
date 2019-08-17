@@ -4,7 +4,7 @@ Implementation of our MICCAI and invited IJCARS paper on detecting anatomical la
 ![DeepDRR Pipeline](https://raw.githubusercontent.com/mathiasunberath/AnatomicalLandmarks/master/img/figure1.png)
 
 ## CT Data Annotation
-Our training data is synthetically generated from full body CTs from the NIH Cancer Imaging Archive. In total, 20 CTs (male and female patients) were cropped to an ROI around the pelvis and 23 anatomical landmark positions were annotated manually in 3D. Landmarks were selected to be clinically meaningful and clearly identifiable in 3D; see Fig. 1 a). We release our annotation files under the folder '/annotation'. The name of the .fcsv file is in consistent with the CT data. 
+Our training data is synthetically generated from full body CTs from the NIH Cancer Imaging Archive [1]. In total, 20 CTs (male and female patients) were cropped to an ROI around the pelvis and 23 anatomical landmark positions were annotated manually in 3D. Landmarks were selected to be clinically meaningful and clearly identifiable in 3D; see Fig. 1 a). We release our annotation files under the folder '/annotation'. The name of the .fcsv file is in consistent with the CT data. 
 ## Projection Geometry
 #### Offset Reading
 *Dicom Offset* 
