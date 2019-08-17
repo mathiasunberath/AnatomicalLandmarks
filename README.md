@@ -8,7 +8,7 @@ Our training data is synthetically generated from full body CTs from the NIH Can
 ## Projection Geometry
 #### Offset Reading
 *Dicom Offset:* 
-The CT volume offset is recorded in the dicom meta data. The dicom slices need to be sorted according to the tag (0020, 0013). Then the dicom offset can be read from tag (0020,0032) in the first slice after sorting.  
+The CT volume offset is recorded in the dicom meta data. The dicom slices need to be sorted according to the tag (0020, 0013). Then the dicom offset can be read from tag (0020,0032) in the **first** slice after sorting.  
 
 *Origin Offset:*
 We calibrated the CT volume in our C-arm geometry by adding an origin offset. The calibrated origin data is uploaded in the text file 'origin.txt'.  
@@ -31,6 +31,7 @@ We provide a matlab code **projection.m** with numeric examples to better undres
 ```
  DICOM offset Tag (0020, 0032): [-199.61, -380.83, -686.80]
  Instance number Tag (0020, 0013): 1
+ Origin Offset: [-206, -224, -118]
 ```
 We use the first annotated landmark position: `[30.45, 122.19, -630.07]`, and generate a random rotation and translation matrix saved as `R` and `T`. The 3-by-3 C-arm intrinsic calibration matrix is saved as `K`. 
 ## Evaluation
