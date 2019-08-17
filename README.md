@@ -6,14 +6,14 @@ Implementation of our MICCAI and invited IJCARS paper on detecting anatomical la
 ## CT Data Annotation
 Our training data is synthetically generated from full body CTs from the NIH Cancer Imaging Archive [1]. In total, 20 CTs (male and female patients) were cropped to an ROI around the pelvis and 23 anatomical landmark positions were annotated manually in 3D. Landmarks were selected to be clinically meaningful and clearly identifiable in 3D; see Fig. 1 a). We release our annotation files under the folder '/annotation'. The name of the .fcsv file is in consistent with the CT data. 
 ## Projection Geometry
-#### Offset Reading
+#### Offset reading
 *Dicom Offset:* 
 The CT volume offset is recorded in the dicom meta data. The dicom slices need to be sorted according to the tag (0020, 0013). Then the dicom offset can be read from tag (0020,0032) in the **first** slice after sorting.  
 
 *Origin Offset:*
 We calibrated the CT volume in our C-arm geometry by adding an origin offset. The calibrated origin data is uploaded in the text file 'origin.txt'.  
 
-#### Projection Formula
+#### Projection formula
 The 3D annotation landmark point is noted as `landmark3D`. The aforementioned dicom offset is noted as `dicom_offset`; origin offset as `origin_offset`. **Please use the following sudo code to manipulate the landmark offset.** 
 ```
 landmark3D[0] = -(landmark3D[0] + dicom_offset[0]) + origin_offset[0]
