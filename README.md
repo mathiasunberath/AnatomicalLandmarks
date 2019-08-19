@@ -35,7 +35,7 @@ We provide a matlab code **projection.m** with numeric examples to better undres
 ```
 We use the first annotated landmark position: `[30.45, 122.19, -630.07]`, and generate a random rotation and translation matrix saved as `R` and `T`. The 3-by-3 C-arm intrinsic calibration matrix is saved as `K`. 
 ## Evaluation
-
+During our pipeline training, we resized the heatmap prediction dimension for memory concern. The original simulated image dimension is 479-by-615 with pixel size 0.616. We then downsampled it to 59-by-76 as network output. During evaluation, we loaded the network prediction result and upsampled back to the original resolution to compare with the groundtruth position. In order to understand our evaluation process, we provide an example code, which uses a single pelvis image prediction heatmaps (23 landmarks * 6 stages = 138 imgs) and its corresponding 2D groundtruth positions to calculate the l2 distance loss. The files and python code are uploaded in the floder **/evaluation**.
 ## Reference
 [1] Roth, H., Lu, L., Seff, A., Cherry, K.M., Hoffman, J., Wang, S., Summers, R.M.:
 A new 2.5 d representation for lymph node detection in ct. The Cancer Imaging
