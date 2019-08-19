@@ -1,0 +1,29 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\info
+{\author Cong Gao}}\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh10200\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 ABD_LYMPH_018: (-209,-229,-128)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ABD_LYMPH_034: (-209,-244,-129)\
+ABD_LYMPH_044: (-234,-267,-145)\
+ABD_LYMPH_057: (-206,-244,-118)\
+ABD_LYMPH_066: (-208,-238,-73)\
+MED_LYMPH_015: (-221,-238,-91)\
+MED_LYMPH_043: (-211,-231,-130)\
+MED_LYMPH_050: (-218,-268,-98)\
+MED_LYMPH_087: (-227,-240,-132)\
+MED_LYMPH_079: (-256,-287,-67)\
+ABD_LYMPH_070: (-246,-297,-77)\
+ABD_LYMPH_080: (-272,-272,-57)\
+ABD_LYMPH_003: (-208,-219,-53)\
+ABD_LYMPH_004: (-205,-207,-75)\
+MED_LYMPH_005: (-267,-242,-87)\
+MED_LYMPH_016: (-206,-210,-75)\
+MED_LYMPH_039: (-257,-273,-113)\
+MED_LYMPH_063: (-234,-241,-127)\
+MED_LYMPH_077: (-201,-197,-77)\
+MED_LYMPH_019: (-201,-216,-81)}
